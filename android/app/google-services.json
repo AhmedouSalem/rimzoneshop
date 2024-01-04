@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "136185653145",
+    "project_id": "rimzoneshop",
+    "storage_bucket": "rimzoneshop.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:136185653145:android:7d929576803b34907c5508",
+        "android_client_info": {
+          "package_name": "com.example.rimzone_shop"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPwHGsvb7X6x8pjz01ZfOMWoqP0xWJ5K4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

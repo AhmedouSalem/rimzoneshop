@@ -1,16 +1,43 @@
 # rimzone_shop
 
-A new Flutter project.
+Projet e-commerce flutter framwork.
 
-## Getting Started
+## Description
 
-This project is a starting point for a Flutter application.
+Ce projet est crée pour gérer une magazine en ligne il est composé de deux parties :
 
-A few resources to get you started if this is your first Flutter project:
+Partie Utilisateur:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Créer un compte
+- Voir les produits diffusé par la magazine
+- Selectionner un produit
+- Faire une commande sur espèce ou à distant
+- Ajouter l'adresse de livraison via la carte maps
+- Payer sur espèce ou à distant
+- Voir les commandes livré, rejeté, en attente
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Demonstration
+
+<img src="demonstration/one.png"  />
+<img src="demonstration/two.png"  />
+<img src="demonstration/three.png"  />
+<img src="demonstration/four.png"  />
+<img src="demonstration/five.png"  />
+<img src="demonstration/six.png"  />
+<img src="demonstration/seven.png"  />
+<img src="demonstration/eight.png"  />
+<img src="demonstration/nine.png"  />
+<img src="demonstration/ten.png"  />
+<img src="demonstration/eleven.png"  />
+<img src="demonstration/twelve.png"  />
+<img src="demonstration/thirten.png"  />
+<img src="demonstration/fourten.png"  />
+<img src="demonstration/fiveten.png"  />
+<img src="demonstration/sixten.png"  />
+<img src="demonstration/seventen.png"  />
+<img src="demonstration/eighten.png"  />
+<img src="demonstration/nineten.png"  />
+<img src="demonstration/twenty.png"  />
+<img src="demonstration/twenty_one.png"  />
+<img src="demonstration/twenty_two.png"  />
+<img src="demonstration/twenty_three.png"  />

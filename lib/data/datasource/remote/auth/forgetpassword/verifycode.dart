@@ -15,4 +15,13 @@ class VerifyCodeResetData {
     });
     return response.fold((l) => l, (r) => r);
   }
+
+  resendEmail(String username, String email) async {
+    Either<StatusRequest, Map<String, dynamic>> response =
+        await crud.postData(AppApiLinks.resendEmail, {
+      "username": username,
+      "email": email,
+    });
+    return response.fold((l) => l, (r) => r);
+  }
 }

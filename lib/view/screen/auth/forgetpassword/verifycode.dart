@@ -4,6 +4,7 @@ import 'package:rimzone_shop/controller/auth/forgetpassword/verifycode_controlle
 import 'package:rimzone_shop/core/class/statusrequest.dart';
 import 'package:rimzone_shop/core/constant/appcolor.dart';
 import 'package:rimzone_shop/core/constant/appimageasset.dart';
+import 'package:rimzone_shop/view/widget/shared/customprimarybutton.dart';
 import 'package:rimzone_shop/view/widget/shared/customtitletext.dart';
 
 import 'package:rimzone_shop/view/widget/auth/custombodytext.dart';
@@ -51,6 +52,19 @@ class VerifyCode extends StatelessWidget {
                           onCodeChanged: (String code) {},
                           onSubmit: (String verificationCode) {
                             controller.goToResetPassword(verificationCode);
+                          },
+                        ),
+                        CustomButtonPrimary(
+                          buttonColor: AppColor.primaryColor,
+                          textButton: "Resend code",
+                          textColor: AppColor.secondColor,
+                          margin: const EdgeInsets.symmetric(
+                            horizontal: 15.0,
+                            vertical: 20.0,
+                          ),
+                          isLoading: false,
+                          onPressed: () async {
+                            await controller.resendEmail();
                           },
                         ),
                       ],

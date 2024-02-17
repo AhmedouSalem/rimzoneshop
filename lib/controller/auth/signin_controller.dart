@@ -109,6 +109,7 @@ class SignInControllerImplement extends SignInController {
             Get.offAllNamed(AppRoutes.homeScreen);
           } else {
             Get.offAllNamed(AppRoutes.verifyCodeSignUp, arguments: {
+              "username": response["data"]["users_name"],
               "email": response["data"]["users_email"],
             });
           }

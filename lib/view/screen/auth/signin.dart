@@ -30,9 +30,9 @@ class SignIn extends StatelessWidget {
             key: signInControllerImplement.formState,
             child: Container(
               padding: const EdgeInsets.symmetric(horizontal: 15.0),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                mainAxisSize: MainAxisSize.max,
+              child: ListView(
+                // mainAxisAlignment: MainAxisAlignment.center,
+                // mainAxisSize: MainAxisSize.max,
                 children: [
                   // Dynamic Content
                   GetBuilder<SignInControllerImplement>(

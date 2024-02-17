@@ -12,6 +12,7 @@ abstract class VerifyCodeSignUpController extends GetxController {
 }
 
 class VerifyCodeSignUpControllerImplement extends VerifyCodeSignUpController {
+  late String username;
   late String email;
   VerifyCodeSignUpData verifyCodeSignUpData =
       VerifyCodeSignUpData(Get.find<Crud>());
@@ -50,8 +51,13 @@ class VerifyCodeSignUpControllerImplement extends VerifyCodeSignUpController {
     update();
   }
 
+  resendEmail() async {
+    await verifyCodeSignUpData.resendEmail(username, email);
+  }
+
   @override
   void onInit() {
+    username = Get.arguments["username"];
     email = Get.arguments["email"];
     super.onInit();
   }

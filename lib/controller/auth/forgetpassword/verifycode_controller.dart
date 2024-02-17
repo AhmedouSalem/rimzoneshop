@@ -8,7 +8,6 @@ import 'package:rimzone_shop/data/datasource/remote/auth/forgetpassword/verifyco
 import '../../../core/constant/approutes.dart';
 
 abstract class VerifyCodeController extends GetxController {
-  verifyCode();
   goToResetPassword(String verificationCode);
 }
 
@@ -16,10 +15,8 @@ class VerifyCodeControllerImplement extends VerifyCodeController {
   VerifyCodeResetData verifyCodeResetData =
       VerifyCodeResetData(Get.find<Crud>());
   StatusRequest? statusRequest;
+  late String username;
   late String email;
-
-  @override
-  verifyCode() {}
 
   @override
   goToResetPassword(String verificationCode) async {
@@ -33,7 +30,12 @@ class VerifyCodeControllerImplement extends VerifyCodeController {
     print(statusRequest);
     if (StatusRequest.success == statusRequest) {
       if (response["status"] == "success") {
-        Get.offAllNamed(AppRoutes.resetPassword, arguments: {"email": email});
+        Get.offAllNamed(
+          AppRoutes.resetPassword,
+          arguments: {
+            "email": email.trim(),
+          },
+        );
       } else if (response["status"] == "failure") {
         warning("Warning".tr, "${"CodeVerification".tr} ${"incorrect".tr}");
         statusRequest = StatusRequest.failure;
@@ -51,8 +53,13 @@ class VerifyCodeControllerImplement extends VerifyCodeController {
     update();
   }
 
+  resendEmail() async {
+    await verifyCodeResetData.resendEmail(username, email);
+  }
+
   @override
   void onInit() {
+    username = Get.arguments["username"];
     email = Get.arguments["email"];
     super.onInit();
   }

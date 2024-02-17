@@ -176,7 +176,8 @@ class CreateAccountControllerImplement extends CreateAccountController {
             if (StatusRequest.success == statusRequest) {
               if (response["status"] == "success") {
                 Get.offAllNamed(AppRoutes.verifyCodeSignUp, arguments: {
-                  "email": listTextEditingController[1].text.trim()
+                  "username": listTextEditingController[0].text.trim(),
+                  "email": listTextEditingController[1].text.trim(),
                 });
               } else if (response["status"] == "failure") {
                 msgError = "Failed".tr;
@@ -339,7 +340,12 @@ class CreateAccountControllerImplement extends CreateAccountController {
 
   @override
   goToVerifyCodeSignUp() {
-    Get.toNamed(AppRoutes.verifyCodeSignUp);
+    Get.toNamed(AppRoutes.verifyCodeSignUp
+        // , arguments: {
+        //   "username": listTextEditingController[0].text.trim(),
+        //   "email": listTextEditingController[1].text.trim(),
+        // }
+        );
   }
 
   @override

@@ -59,8 +59,13 @@ class ForgetPasswordControllerImplement extends ForgetPasswordController {
         print(statusRequest);
         if (StatusRequest.success == statusRequest) {
           if (response["status"] == "success") {
-            Get.offAllNamed(AppRoutes.verifyCode,
-                arguments: {"email": email.text.trim()});
+            Get.offAllNamed(
+              AppRoutes.verifyCode,
+              arguments: {
+                "username": response["message"],
+                "email": email.text.trim(),
+              },
+            );
           } else if (response["status"] == "failure") {
             isLoading = false;
             warning("Warning".tr, "emailNotFound".tr);

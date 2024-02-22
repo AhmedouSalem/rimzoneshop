@@ -1,4 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:rimzone_shop/controller/itemsdetails_controller.dart';
@@ -26,14 +27,10 @@ class ItemsDetails extends StatelessWidget {
             width: double.infinity,
             height: Get.width,
           ),
-          Container(
-            margin: const EdgeInsets.only(top: 35.0),
-            child: const CustomTopButtonItemsDetails(),
-          ),
           Positioned(
             left: 40.0,
             right: 40.0,
-            bottom: Get.height / 1.9,
+            bottom: Get.height / 2.2,
             child: Hero(
               tag: "${controller.model.itemsId}_${controller.hero}",
               child: CachedNetworkImage(
@@ -43,6 +40,10 @@ class ItemsDetails extends StatelessWidget {
                 fit: BoxFit.contain,
               ),
             ),
+          ),
+          const SafeArea(
+            maintainBottomViewPadding: true,
+            child: CustomTopButtonItemsDetails(),
           ),
           DraggableScrollableSheet(
             maxChildSize: 0.8,

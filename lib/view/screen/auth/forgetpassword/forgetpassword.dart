@@ -8,6 +8,7 @@ import 'package:rimzone_shop/view/widget/shared/customappbar.dart';
 import 'package:rimzone_shop/view/widget/shared/customprimarybutton.dart';
 import 'package:rimzone_shop/view/widget/auth/custombodytext.dart';
 import 'package:get/get.dart';
+import 'package:rimzone_shop/view/widget/shared/shared.dart';
 
 class ForgetPasswordAuth extends StatelessWidget {
   const ForgetPasswordAuth({super.key});
@@ -18,16 +19,18 @@ class ForgetPasswordAuth extends StatelessWidget {
         Get.put(ForgetPasswordControllerImplement());
     return Scaffold(
       backgroundColor: AppColor.secondColor,
+      resizeToAvoidBottomInset: false,
       appBar: CustomAppBar(title: "ForgetPassword".tr),
       body: SafeArea(
         maintainBottomViewPadding: true,
+        minimum: const EdgeInsets.symmetric(horizontal: 15.0),
         child: Form(
           key: forgetPasswordControllerImplement.formState,
-          child: ListView(
-            physics: const ClampingScrollPhysics(),
-            padding: const EdgeInsets.symmetric(horizontal: 15.0),
+          child: Column(
+            // physics: const ClampingScrollPhysics(),
+            // padding: const EdgeInsets.symmetric(horizontal: 15.0),
             children: [
-              Image.asset(AppImageAsset.forgetPassword),
+              Image.asset(AppImageAsset.forgetPassword, height: AppResponsive.fullHeight * 0.3,),
               CustomTitleText(
                 title: "${"Check".tr}"
                     "${"The".tr.toLowerCase()}"
@@ -36,7 +39,7 @@ class ForgetPasswordAuth extends StatelessWidget {
               CustomBodyTextAuth(
                 bodyText: "ForgetPasswordBody".tr,
               ),
-              const SizedBox(height: 20.0),
+              SizedBox(height: AppResponsive.fullWidth * 0.015),
               GetBuilder<ForgetPasswordControllerImplement>(
                 builder: (controller) => Column(
                   children: [

@@ -11,6 +11,7 @@ import 'package:rimzone_shop/view/widget/auth/custombodytext.dart';
 import 'package:rimzone_shop/view/widget/shared/customappbar.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:get/get.dart';
+import 'package:rimzone_shop/view/widget/shared/shared.dart';
 
 class VerifyCode extends StatelessWidget {
   const VerifyCode({super.key});
@@ -20,6 +21,7 @@ class VerifyCode extends StatelessWidget {
     Get.put(VerifyCodeControllerImplement());
     return Scaffold(
       backgroundColor: AppColor.secondColor,
+      resizeToAvoidBottomInset: false,
       appBar: CustomAppBar(title: "CodeVerification".tr),
       body: GetBuilder<VerifyCodeControllerImplement>(
         builder: (controller) =>
@@ -30,17 +32,17 @@ class VerifyCode extends StatelessWidget {
                   )
                 : SafeArea(
                     maintainBottomViewPadding: true,
-                    child: ListView(
-                      physics: const ClampingScrollPhysics(),
-                      padding: const EdgeInsets.symmetric(horizontal: 15.0),
+                    child: Column(
+                      // physics: const ClampingScrollPhysics(),
+                      // padding: const EdgeInsets.symmetric(horizontal: 15.0),
                       children: [
-                        Image.asset(AppImageAsset.otp),
+                        Image.asset(AppImageAsset.otp, height: AppResponsive.fullHeight * 0.3,),
                         CustomTitleText(title: "OTPVerification".tr),
                         CustomBodyTextAuth(
                           bodyText:
                               "${"VerifyCodeBodyReset".tr} ${"\n"}${controller.email.toLowerCase()}",
                         ),
-                        const SizedBox(height: 20.0),
+                        SizedBox(height: AppResponsive.fullWidth * 0.015),
                         OtpTextField(
                           borderWidth: 1.3,
                           cursorColor: AppColor.blackColor,

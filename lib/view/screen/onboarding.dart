@@ -8,6 +8,7 @@ import 'package:rimzone_shop/view/widget/onboarding/customImage.dart';
 import 'package:rimzone_shop/view/widget/onboarding/custombutton.dart';
 import 'package:rimzone_shop/view/widget/onboarding/customdotconroller.dart';
 import 'package:get/get.dart';
+import 'package:rimzone_shop/view/widget/shared/shared.dart';
 
 class OnBoarding extends StatelessWidget {
   const OnBoarding({super.key});
@@ -28,30 +29,30 @@ class OnBoarding extends StatelessWidget {
               Expanded(
                 flex: 1,
                 child: Container(
-                  decoration: const BoxDecoration(
+                  decoration: BoxDecoration(
                     color: AppColor.onBoardingBottomContainer,
                     borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(80.0),
-                      topRight: Radius.circular(80.0),
+                      topLeft: Radius.circular(AppResponsive.fullWidth * 0.15),
+                      topRight: Radius.circular(AppResponsive.fullWidth * 0.15),
                     ),
                   ),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     children: [
-                      const SizedBox(height: 20.0),
+                      SizedBox(height: AppResponsive.fullHeight * 0.015),
                       const CustomDotControllerOnboarding(),
-                      const SizedBox(
-                        height: 40.0,
+                      SizedBox(
+                        height: AppResponsive.fullHeight * 0.015,
                       ),
                       Text(
                         onboardingBottomList[controller.currentPage].title,
-                        style: Theme.of(context).textTheme.titleLarge,
-                      ),
-                      const SizedBox(height: 20.0),
+                        style: Theme.of(context).textTheme.titleLarge!.copyWith(height: AppResponsive.fullHeight * 0.001, fontSize: AppResponsive.fullWidth * 0.05,),
+                      ),// 0.8
+                      SizedBox(height: AppResponsive.fullWidth * 0.05),
                       Text(
                         textAlign: TextAlign.center,
                         onboardingBottomList[controller.currentPage].body,
-                        style: Theme.of(context).textTheme.bodyLarge!,
+                        style: Theme.of(context).textTheme.bodyLarge!.copyWith(fontSize: AppResponsive.fullWidth * 0.035),
                       ),
                       const Spacer(),
                       const CustomButtonOnboarding(),

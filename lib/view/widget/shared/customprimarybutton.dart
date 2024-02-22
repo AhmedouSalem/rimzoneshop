@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rimzone_shop/core/constant/appcolor.dart';
+import 'package:rimzone_shop/view/widget/shared/shared.dart';
 
 class CustomButtonPrimary extends StatelessWidget {
   const CustomButtonPrimary({
@@ -24,7 +25,7 @@ class CustomButtonPrimary extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: margin,
-      height: 45.0,
+      height: AppResponsive.fullHeight * 0.07,
       width: double.infinity,
       child: MaterialButton(
         disabledColor: buttonColor == AppColor.primaryColor
@@ -34,7 +35,7 @@ class CustomButtonPrimary extends StatelessWidget {
         highlightElevation: 0.0,
         elevation: 0.0,
         shape: RoundedRectangleBorder(
-          borderRadius: borderRadius ?? BorderRadius.circular(15.0),
+          borderRadius: borderRadius ?? BorderRadius.circular(AppResponsive.fullHeight * 0.02),
           side: buttonColor == AppColor.primaryColor
               ? BorderSide.none
               : BorderSide(color: textColor),

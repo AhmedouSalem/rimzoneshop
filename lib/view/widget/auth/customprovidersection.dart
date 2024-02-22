@@ -8,26 +8,30 @@ class CustomProviderSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-        Expanded(
-          child: CustomButtonProviderAuth(
+        // Expanded(
+        //   child:
+          CustomButtonProviderAuth(
             assetName: AppImageAsset.facebookLogo,
             onPressed: () {},
           ),
-        ),
-        Expanded(
-          child: CustomButtonProviderAuth(
+        // ),
+        // Expanded(
+        //   child:
+          CustomButtonProviderAuth(
             assetName: AppImageAsset.googleLogo,
-            margin: const EdgeInsets.symmetric(horizontal: 5.0),
+            // margin: const EdgeInsets.symmetric(horizontal: 5.0),
             onPressed: () {},
           ),
-        ),
-        Expanded(
-          child: CustomButtonProviderAuth(
+        // ),
+        // Expanded(
+        //   child:
+          CustomButtonProviderAuth(
             assetName: AppImageAsset.appleLogo,
             onPressed: () {},
           ),
-        ),
+        // ),
       ],
     );
   }

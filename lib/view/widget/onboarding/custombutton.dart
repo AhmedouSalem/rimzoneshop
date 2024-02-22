@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rimzone_shop/controller/onboarding_controller.dart';
 import 'package:get/get.dart';
+import 'package:rimzone_shop/view/widget/shared/shared.dart';
 
 import '../../../core/constant/appcolor.dart';
 import '../../../data/datasource/static/static.dart';
@@ -13,10 +14,10 @@ class CustomButtonOnboarding extends StatelessWidget {
     return GetBuilder<OnBoardingControllerImplement>(
       builder: (controller) => Container(
         height: 45.0,
-        margin: const EdgeInsets.only(bottom: 25.0),
+        margin: EdgeInsets.only(bottom: AppResponsive.fullWidth * 0.05),
         child: MaterialButton(
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(15.0),
+            borderRadius: BorderRadius.circular(AppResponsive.fullWidth * 0.038),
           ),
           minWidth: 200.0,
           color: controller.currentPage == onboardingBottomList.length - 1

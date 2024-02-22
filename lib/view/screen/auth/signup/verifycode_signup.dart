@@ -11,6 +11,7 @@ import 'package:rimzone_shop/view/widget/auth/custombodytext.dart';
 import 'package:rimzone_shop/view/widget/shared/customappbar.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:get/get.dart';
+import 'package:rimzone_shop/view/widget/shared/shared.dart';
 
 class VerifyCodeSignUp extends StatelessWidget {
   const VerifyCodeSignUp({super.key});
@@ -20,6 +21,7 @@ class VerifyCodeSignUp extends StatelessWidget {
     Get.put(VerifyCodeSignUpControllerImplement());
     return Scaffold(
       backgroundColor: AppColor.secondColor,
+      resizeToAvoidBottomInset: false,
       appBar: CustomAppBar(title: "CodeVerification".tr),
       body: GetBuilder<VerifyCodeSignUpControllerImplement>(
         builder: (controller) =>
@@ -29,17 +31,17 @@ class VerifyCodeSignUp extends StatelessWidget {
                   )
                 : SafeArea(
                     maintainBottomViewPadding: true,
-                    child: ListView(
-                      physics: const ClampingScrollPhysics(),
-                      padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                    child: Column(
+                      // physics: const ClampingScrollPhysics(),
+                      // padding: const EdgeInsets.symmetric(horizontal: 15.0),
                       children: [
-                        Image.asset(AppImageAsset.otp),
-                        CustomTitleText(title: "OTPVerification".tr),
+                        Image.asset(AppImageAsset.otp, height: AppResponsive.fullHeight * 0.3,),
+                        // CustomTitleText(title: "OTPVerification".tr),
                         CustomBodyTextAuth(
                           bodyText:
-                              "${"VerifyCodeBodySignUp".tr} ${"\n"}${controller.email.toLowerCase()}",
+                              "${"OTPVerification".tr} : ${controller.email.toLowerCase()}",
                         ),
-                        const SizedBox(height: 20.0),
+                        SizedBox(height: AppResponsive.fullWidth * 0.015),
                         OtpTextField(
                           borderWidth: 1.3,
                           cursorColor: AppColor.blackColor,
@@ -57,9 +59,9 @@ class VerifyCodeSignUp extends StatelessWidget {
                           buttonColor: AppColor.primaryColor,
                           textButton: "Resend code",
                           textColor: AppColor.secondColor,
-                          margin: const EdgeInsets.symmetric(
+                          margin: EdgeInsets.symmetric(
                             horizontal: 15.0,
-                            vertical: 20.0,
+                            vertical: AppResponsive.fullHeight * 0.05,
                           ),
                           isLoading: false,
                           onPressed: () async {

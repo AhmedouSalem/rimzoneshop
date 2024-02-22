@@ -13,6 +13,7 @@ class CreateAccount extends StatelessWidget {
   Widget build(BuildContext context) {
     Get.put(CreateAccountControllerImplement());
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: SafeArea(
         child: Column(
           mainAxisSize: MainAxisSize.min,

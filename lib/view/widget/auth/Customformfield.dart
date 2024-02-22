@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rimzone_shop/view/widget/shared/shared.dart';
 
 import '../../../core/constant/appcolor.dart';
 
@@ -40,17 +41,17 @@ class CustomTextFormFieldAuth extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(bottom: 20.0),
-      padding: const EdgeInsets.all(10.0),
+      margin:  EdgeInsets.only(bottom: AppResponsive.fullWidth * 0.05),
+      padding:  EdgeInsets.all(AppResponsive.fullHeight * 0.015),
       decoration: BoxDecoration(
         color: AppColor.secondColor,
         border: Border.all(
           color: borderColor ?? const Color(0xFF000000),
           width: isAutoFocus == true ? 1.3 : 1,
         ),
-        borderRadius: BorderRadius.circular(15.0),
+        borderRadius: BorderRadius.circular(AppResponsive.fullHeight * 0.02),
       ),
-      height: 60,
+      height: AppResponsive.fullHeight * 0.07,
       child: Row(
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.start,
@@ -61,8 +62,8 @@ class CustomTextFormFieldAuth extends StatelessWidget {
               onChanged: onChanged,
               validator: validator,
               onTap: onTapField,
-              style: const TextStyle(
-                  fontSize: 14.7, height: 1.0, decoration: TextDecoration.none),
+              style:  TextStyle(
+                  fontSize: AppResponsive.fullHeight * 0.025, height: AppResponsive.fullWidth * 0.003, decoration: TextDecoration.none),
               focusNode: focusNode,
               keyboardType: keyboardType,
               autofocus:
@@ -70,11 +71,11 @@ class CustomTextFormFieldAuth extends StatelessWidget {
               controller: textEditingController,
               obscureText: boolObscureText == false ? false : true,
               decoration: InputDecoration(
-                contentPadding: const EdgeInsets.only(bottom: 8.0),
+                contentPadding:  EdgeInsets.only(bottom: AppResponsive.fullHeight * 0.01),
                 labelText: labelText,
                 labelStyle: TextStyle(fontSize: fontSize, color: labelColor),
                 floatingLabelStyle: TextStyle(
-                    color: labelColor, fontSize: fontSize, height: 1.0),
+                    color: labelColor, fontSize: fontSize, height: 0.5,),
                 border: InputBorder.none,
               ),
             ),

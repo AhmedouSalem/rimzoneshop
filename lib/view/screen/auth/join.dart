@@ -5,6 +5,7 @@ import 'package:rimzone_shop/core/constant/appimageasset.dart';
 import 'package:rimzone_shop/core/functions/appalertexit.dart';
 import 'package:rimzone_shop/view/widget/shared/customprimarybutton.dart';
 import 'package:get/get.dart';
+import 'package:rimzone_shop/view/widget/shared/shared.dart';
 
 class JoinApp extends StatelessWidget {
   const JoinApp({super.key});
@@ -25,6 +26,7 @@ class JoinApp extends StatelessWidget {
                 fit: BoxFit.fill,
                 AppImageAsset.authPageImage,
                 width: double.infinity,
+                height: AppResponsive.fullHeight * 0.4,
               ),
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 15.0),
@@ -53,7 +55,7 @@ class JoinApp extends StatelessWidget {
                       child: Text(
                         textAlign: TextAlign.start,
                         "authPageTitle".tr,
-                        style: Theme.of(context).textTheme.titleLarge,
+                        style: Theme.of(context).textTheme.titleLarge!.copyWith(height: 1),
                       ),
                     ),
                     Container(

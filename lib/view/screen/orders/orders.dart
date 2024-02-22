@@ -15,6 +15,7 @@ class ViewOrders extends StatelessWidget {
       builder: (controller) => Scaffold(
         appBar: AppBar(
           title: Text("orders".tr),
+          // backgroundColor: AppColor.primaryColor,
           bottom: TabBar(
             controller: controller.tabController,
             indicator: const BoxDecoration(
@@ -27,20 +28,28 @@ class ViewOrders extends StatelessWidget {
                 end: Alignment.centerRight,
               ),
             ),
-            labelPadding: const EdgeInsets.all(15.0),
+            labelPadding: const EdgeInsets.symmetric(vertical: 15.0),
             tabs: [
-              Text(
-                "Pending".tr,
-                style: const TextStyle(
-                  fontSize: 16.0,
-                  fontWeight: FontWeight.bold,
+              Container(
+                width: double.infinity,
+                alignment: Alignment.center,
+                child: Text(
+                  "Pending".tr,
+                  style: const TextStyle(
+                    fontSize: 16.0,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
-              Text(
-                "Archive".tr,
-                style: const TextStyle(
-                  fontSize: 16.0,
-                  fontWeight: FontWeight.bold,
+              Container(
+                width: double.infinity,
+                alignment: Alignment.center,
+                child: Text(
+                  "Archive".tr,
+                  style: const TextStyle(
+                    fontSize: 16.0,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
             ],

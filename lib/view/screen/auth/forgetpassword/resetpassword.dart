@@ -17,6 +17,7 @@ class ResetPassword extends StatelessWidget {
         Get.put(ResetPasswordControllerImplement());
     return Scaffold(
       backgroundColor: AppColor.secondColor,
+      resizeToAvoidBottomInset: false,
       appBar: CustomAppBar(
           title:
               "${"Reset".tr} ${"Le".tr.toLowerCase()} ${"Password".tr.toLowerCase()}"),

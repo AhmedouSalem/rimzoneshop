@@ -53,6 +53,7 @@ class DefaultFirebaseOptions {
     projectId: 'rimzoneshop',
     authDomain: 'rimzoneshop.firebaseapp.com',
     storageBucket: 'rimzoneshop.appspot.com',
+    measurementId: "G-84SNX2477K",
   );
 
   static const FirebaseOptions android = FirebaseOptions(

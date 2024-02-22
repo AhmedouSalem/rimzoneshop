@@ -6,8 +6,8 @@ class AppImageAsset {
   static const String onboardingThree = "$rootImage/onboardingthree.PNG";
   static const String authPageImage = "$rootImage/localshop.PNG";
   static const String facebookLogo = "$rootImage/logofb.png";
-  static const String googleLogo = "$rootImage/logogoogle.jpg";
-  static const String appleLogo = "$rootImage/logoapple.jpg";
+  static const String googleLogo = "$rootImage/logogoogle.png";
+  static const String appleLogo = "$rootImage/logoapple.png";
   static const String forgetPassword = "$rootImage/forgetpassword.PNG";
   static const String otp = "$rootImage/otp.PNG";
   static const String iphone = "$rootImage/iphone.png";

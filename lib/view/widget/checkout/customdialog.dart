@@ -43,9 +43,8 @@ class CustomDialogCheckout extends StatelessWidget {
                           onMapCreated:
                               (GoogleMapController googleMapController) {
                             if (!controller.completer.isCompleted) {
-                              controller.completer
-                                  .complete(googleMapController);
-                              controller.checkOpenMap();
+                            controller.completer.complete(googleMapController);
+                            controller.checkOpenMap();
                             }
                           },
                         ),

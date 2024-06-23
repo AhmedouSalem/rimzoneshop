@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
         theme: controller.appTheme,
         initialRoute: "/",
         getPages: AppGetPageRoutes.routes,
-        debugShowCheckedModeBanner: false,
+        debugShowCheckedModeBanner: true,
         transitionDuration: const Duration(milliseconds: 500),
         defaultTransition: controller.localeLanguage.languageCode == "ar"
             ? Transition.leftToRight

@@ -75,6 +75,10 @@ class SettingsDefaultHomePage extends StatelessWidget {
                       onTap: () {
                         Get.dialog(
                           Dialog(
+                            shape: RoundedRectangleBorder(
+                              borderRadius:
+                                  BorderRadius.circular(Get.width * 0.05),
+                            ),
                             child: GetBuilder<AppLocaleControllerImplement>(
                               builder: (controller) => Column(
                                 mainAxisSize: MainAxisSize.min,

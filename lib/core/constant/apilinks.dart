@@ -1,9 +1,9 @@
 class AppApiLinks {
-  // static const String serverLink = "http://172.20.10.3/rimzoneshop";
+  static const String serverLink = "http://10.42.0.95/rimzoneshop";
   // static const String serverLink = "http://192.168.100.48/rimzoneshop";
   // static const String serverLink = "http://192.168.226.171/rimzoneshop";
-  static const String serverLink =
-      "https://rimzoneshop.000webhostapp.com/rimzoneshop";
+  // static const String serverLink =
+  //     "https://rimzoneshop.000webhostapp.com/rimzoneshop";
   static const String test = "$serverLink/auth/test.php";
   // authenticate
   static const String signUp = "$serverLink/auth/signup.php";

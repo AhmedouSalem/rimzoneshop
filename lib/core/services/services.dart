@@ -70,7 +70,7 @@ class AppServices extends GetxService {
     );
     sharedPreferences = await SharedPreferences.getInstance();
     await determinePosition();
-    // await fcmMessage();
+    await fcmMessage();
     return this;
   }
 }

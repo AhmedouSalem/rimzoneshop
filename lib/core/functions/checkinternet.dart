@@ -3,7 +3,7 @@ import 'dart:io';
 Future<bool> checkInternet() async {
   try {
     List<InternetAddress> internetAddress = await InternetAddress.lookup(
-      "google.com",
+      "10.42.0.95",
       type: InternetAddressType.any,
     );
     if (internetAddress.isNotEmpty &&
